@@ -43,15 +43,9 @@
       enable = true;
       windowManager.qtile.enable = true;
       displayManager.sessionCommands = ''
-        xwallpaper --zoom ~/walls/miku.png
+        xwallpaper --zoom 'path to wallpaper'
         xset r rate 200 35 & 
       '';
-    };
-
-    services.picom = {
-      enable = true;
-      backend = "glx";
-      fade = true;
     };  
 
   # Configure keymap in X11
@@ -62,13 +56,13 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  # services.pulseaudio.enable = true;
+#  services.pulseaudio.enable = true;
   # OR
- services.pipewire = {
-  enable = true;
-  pulse.enable = true;
-  package = pkgs.pipewire;
- };
+# services.pipewire = {
+#  enable = true;
+#  pulse.enable = true;
+#  package = pkgs.pipewire;
+# };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -100,7 +94,9 @@
     fastfetch
     git
     pfetch
-    element-desktop 
+    element-desktop
+    picom
+    cni-plugins 
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
