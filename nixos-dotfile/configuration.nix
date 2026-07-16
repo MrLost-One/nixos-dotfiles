@@ -43,7 +43,7 @@
       enable = true;
       windowManager.qtile.enable = true;
       displayManager.sessionCommands = ''
-        xwallpaper --zoom 'path to wallpaper'
+        xwallpaper --zoom 'path to wallpapeer'
         xset r rate 200 35 & 
       '';
     };  
@@ -96,7 +96,20 @@
     pfetch
     element-desktop
     picom
-    cni-plugins 
+    cni-plugins
+    pkgs.pwvucontrol
+    pkgs.audacious
+    pkgs.nicotine-plus
+    pkgs.ani-cli
+    pipes
+    cava
+    lavat
+    obs-studio
+    pkgs.transmission_4-qt
+    cbonsai
+    clock-rs
+    pkgs.vlc
+    pkgs.localsend
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

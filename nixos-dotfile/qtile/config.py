@@ -110,9 +110,8 @@ layout_theme = {
     "border_width": 3,
     "margin": 5,
     "border_focus": "FFFFFF",
-    "border_normal": "CCCCCC",
+    "border_focus": "CCCCCC",
     }
-
 layouts = [
     # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
     # layout.Max(),
@@ -122,11 +121,12 @@ layouts = [
     # layout.Matrix(),
      layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
-    # layout.RatioTile(),
+    # layout.RatioTile(**layout_theme),
     # layout.Tile(**layout_theme),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
+    # layout.Spiral(**layout_theme),
 ]
 
 widget_defaults = dict(
@@ -152,8 +152,8 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
+                 widget.StatusNotifier(),
+                # widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 #widget.QuickExit(),
             ],
