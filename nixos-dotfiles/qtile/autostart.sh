@@ -2,3 +2,4 @@
 picom &
 pwvucontrol &
 nicotine-plus &
+xmobar &

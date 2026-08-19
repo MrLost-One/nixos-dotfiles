@@ -43,7 +43,7 @@
       enable = true;
       windowManager.qtile.enable = true;
       displayManager.sessionCommands = ''
-        xwallpaper --zoom path to wallpaper
+        xwallpaper --zoom ~/walls/samurai.png
         xset r rate 200 35 & 
       '';
     };  
@@ -110,8 +110,14 @@
     clock-rs
     pkgs.vlc
     pkgs.localsend
+    pkgs.gpick
+    pkgs.phoronix-test-suite
+    pkgs.discord
+    pkgs.flatpak
+    pkgs._7zip-zstd
   ];
 
+  nixpkgs.config.allowUnfree = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

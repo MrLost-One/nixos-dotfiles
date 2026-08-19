@@ -11,7 +11,7 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = guess_terminal()
 
-@hook.subscribe.startup_once
+@hook.subscribe.startup
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call(home)
@@ -152,8 +152,9 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                #widget.StatusNotifier(),
+                widget.StatusNotifier(),
                 widget.Systray(),
+                widget.Battery(update_interval=3, format='{char} {percent: 2.0%} {hour:d}: {min:02d}'),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 # widget.QuickExit(),
             ],
